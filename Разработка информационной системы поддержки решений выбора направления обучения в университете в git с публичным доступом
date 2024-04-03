@@ -1,0 +1,29 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Главная страница
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+# Страница выбора направления обучения
+@app.route('/choose_direction')
+def choose_direction():
+    return render_template('choose_direction.html')
+
+# Страница с результатами выбора направления обучения
+@app.route('/results')
+def results():
+    return render_template('results.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+git init
+git add .
+git commit -m "Initial commit"
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <URL_Разработка информационной системы поддержки решений выбора направления обучения в университете в git с публичным доступом>
+git push -u origin master
